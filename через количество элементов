@@ -51,15 +51,15 @@ float f2(float x, int n){
 }
  
 int main(){
-    double x, f2r;
+    float x, f2r;
     int n;
 
     printf("Введите степень  x:\n");
-    scanf("%lf", &x);
+    scanf("%f", &x);
     printf("Введите количество членов в ряде  n:\n");
     scanf("%d", &n);
     f2r = f2(x, n);
-    printf("%lf\n",f2r);
+    printf("%f\n",f2r);
     printf("%f", (x)/(sqrt(1-2*x)));
     
     return 0;
