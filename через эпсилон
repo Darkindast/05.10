@@ -71,38 +71,4 @@ int main(){
     
     return 0;
 }
-    }
- 
-    return chislo;
-}
- 
-float f2(float x, float e){
 
-    float p = x,p1, y=x*x, sum = p;
-    int i = 1;
-    
-    while (ab(p1) < e){
-        p = (p*x)/i;
-        p1 = p*doublefact(2*i -1);
-        i += 1;
-        sum+=p1;
-        
-    }
-    return sum;
-}
- 
-int main(){
-
-    float x, e, f2r;
-    int n;
-
-    printf("Введите степень  x:\n");
-    scanf("%f", &x);
-    printf("Введите количество членов в ряде  n:\n");
-    scanf("%f", &e);
-    f2r = f2(x, e);
-    printf("%f\n",f2r);
-    printf("%f", (x)/(sqrt(1-2*x)));
-    
-    return 0;
-}
