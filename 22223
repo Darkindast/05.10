@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+float f2(float x, float e){
+    float p = x,p1,sum = p;
+    int i = 1;
+    while (p < e){
+        p = (p*x)*(2*i-1)/i;
+        i += 1;
+        sum+=p;
+        
+    }
+    return sum;
+}
+ 
+int main(){
+    float x, e, f2r;
+    int n;
+
+    printf("Введите степень  x:\n");
+    scanf("%f", &x);
+    printf("Укажите точность e:\n");
+    scanf("%f", &e);
+    f2r = f2(x, e);
+    printf("%f\n",f2r);
+    printf("%f", (x)/(sqrt(1-2*x)));
+    return 0;
+}
