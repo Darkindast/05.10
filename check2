@@ -5,6 +5,13 @@ float checkx(float x){
    
     while ((scanf("%f", &x) != 1) || (x >= 0.5) || (x <-0.5)){
         scanf("%*c"); /* "*" указывает, что поле должно быть прочитано, но проигнорировано */
+#include <stdio.h>
+#include <math.h>
+
+float checkx(float x){
+   
+    while ((scanf("%f", &x) != 1) || (x >= 0.5) || (x <-0.5)){
+        scanf("%*c"); /* "*" указывает, что поле должно быть прочитано, но проигнорировано */
         printf("некорректно введено значение x\n");
     }
     return x;
@@ -29,7 +36,7 @@ float ab(float chislo){
 } 
 
 float f2(float x, float e){
-    float p = x,p1,sum = p;
+    float p = x,sum = p;
     int i;
     for (i =1; ab(p) > e; i++){
         p = (p*x)*(2*i-1)/i;
@@ -40,15 +47,15 @@ float f2(float x, float e){
 }
  
 int main(){
-    float x, e, f2r;
-    int n;
+    float chislo=0, accuracy=0, f2r;
 
     printf("Введите степень  x:\n");
-    x = checkx(x);
-    printf("Укажите точность e:\n");
-    e = checke(e);
-    f2r = f2(x, e);
+    chislo= checkx(chislo);
+    printf("Введите количество членов в ряде:\n");
+    accuracy = checke(accuracy);
+    f2r = f2(chislo, accuracy);
     printf("%f\n",f2r);
-    printf("%f", (x)/(sqrt(1-2*x)));
+    printf("%f", (chislo)/(sqrt(1-2*chislo)));
+    
     return 0;
 }
