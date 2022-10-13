@@ -4,7 +4,7 @@
 float checkx(float x){
    
     while ((scanf("%f", &x) != 1) || (x >= 0.5) || (x <-0.5)){
-        scanf("%*c"); /* "*" указывает, что поле должно быть прочитано, но проигнорировано */
+        scanf("%*[^\n]"); 
         printf("некорректно введено значение x\n");
     }
     return x;
@@ -13,7 +13,7 @@ float checkx(float x){
 float checke(float e){
    
     while ((scanf("%f", &e) != 1) || (e <= 0)){
-        scanf("%*c"); /* "*" указывает, что поле должно быть прочитано, но проигнорировано */
+        scanf("%*[^\n]"); 
         printf("некорректно введено значение e\n");
     }
     return e;
@@ -40,13 +40,13 @@ float f2(float x, float e){
 }
  
 int main(){
-    float chislo=0, accuracy=0, f2r;
+    float chislo=0, e=0, f2r;
 
-    printf("Введите степень  x:\n");
+    printf("Введите chislo:\n");
     chislo= checkx(chislo);
-    printf("Введите количество членов в ряде:\n");
-    accuracy = checke(accuracy);
-    f2r = f2(chislo, accuracy);
+    printf("Введите точность e:\n");
+    e = checke(e);
+    f2r = f2(chislo, e);
     printf("%f\n",f2r);
     printf("%f", (chislo)/(sqrt(1-2*chislo)));
     
