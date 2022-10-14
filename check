@@ -22,11 +22,13 @@ int checkn(int n){
 
 float f2(float x, int n){
     float p = x, sum = p;
+    int i = 1;
     
-    for(int i = 1; i <n; i++){
+    for(i; i <n; i++){
         p = (p*x)*(i*2-1)/i;
  
         sum+=p;
+
         
     }
     return sum;
