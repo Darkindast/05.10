@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
+gdgdgdgd
 float checkx(float x){
    
     while ((scanf("%f", &x) != 1) || (x >= 0.5) || (x <-0.5)){
